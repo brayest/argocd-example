@@ -1,0 +1,44 @@
+# Compiled files
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+*.terraform.lock.hcl*
+.terraform.lock.hcl
+
+# logs
+*.log
+
+# Directories
+.terraform/
+.vagrant/
+
+# SSH Keys
+*.pem
+*.ovpn
+*.env
+*.id
+
+# Backup files
+*.bak
+
+# Ignored Terraform files
+*gitignore*.tf
+
+# Ignore Mac .DS_Store files
+.DS_Store
+
+builds/
+*serverless/
+*website/
+
+*.tfstate*
+lock.json
+out.json
+.terraform/*
+Demo-Notes.md
+.kitchen/*
+*/test/fixtures/*/.terraform/modules/*
+Gemfile.lock
+
+# VPN
+easy-rsa

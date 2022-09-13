@@ -1,0 +1,9 @@
+apiVersion: v1
+appVersion: "1.0.0"
+name: autoscaler
+description: A Helm chart for EKS cluster autoscaler
+version: 0.1.1
+kubeVersion: ">=1.14.0-0"
+keywords:
+  - cluster_autoscaler
+
