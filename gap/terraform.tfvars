@@ -2,7 +2,7 @@
 region                  = "us-east-1"
 project                 = "gap"
 environment             = "dev"
-domain_name             = "argocd-example.com"
+domain_name             = "wearegap.com"
 internal_domain_name    = "gap.int"
 public_key_name         = "gap_infrastructure"
 dev_accout_id           = "159783617695"

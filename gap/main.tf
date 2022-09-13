@@ -239,7 +239,7 @@ module "web" {
   service_name = "gap-web"
   namespace =  "default"
   public_domain_hosted_zone = aws_route53_zone.internal_domain.id
-  application_ingress_endpoint = module.ingress_controller.internal_load_balancer_endpoint
+  application_ingress_endpoint = module.ingress_controller.public_load_balancer_endpoint
   environment = local.environment
   eks_cluster_endpoint = module.eks.cluster_endpoint
   eks_cluster_name = local.cluster_config.cluster_name
