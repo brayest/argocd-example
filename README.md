@@ -1,7 +1,6 @@
 
 ```mermaid
 architecture-beta
-architecture-beta
   group api_gateway[API Gateway]
   
   service vpc_link[VPC Link] in api_gateway
