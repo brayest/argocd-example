@@ -1,29 +1,12 @@
-
 ```mermaid
-architecture-beta
-  group api_gateway[API Gateway]
-  
-  service vpc_link[VPC Link] in api_gateway
-  service lambda_function[Lambda Function] in api_gateway
-  service dynamodb[DynamoDB] in api_gateway
-
-  api_gateway --> vpc_link
-  vpc_link --> lambda_function
-  lambda_function --> dynamodb
-
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#FF9900", "edgeLabelBackground": "#ffffff", "tertiaryColor": "#232F3E", "primaryTextColor": "#ffffff", "fontFamily": "Arial"}}}%%
+flowchart LR
+    subgraph VPC
+        direction TB
+        NLB[Network Load Balancer]
+        ECS[Amazon ECS Service]
+        NLB --> ECS
+    end
+    APIGW[API Gateway] --> VPCLink[VPC Link]
+    VPCLink --> NLB
 ```
-
-
-
-
-
-# Requirements
-
-
-
-* GIT
-* Terraform
-* Terragrunt
-* helm
-* docker
-* BASH
