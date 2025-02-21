@@ -1,16 +1,17 @@
 
 ```mermaid
 architecture-beta
-    group api(cloud)[API]
+architecture-beta
+  group api_gateway[API Gateway]
+  
+  service vpc_link[VPC Link] in api_gateway
+  service lambda_function[Lambda Function] in api_gateway
+  service dynamodb[DynamoDB] in api_gateway
 
-    service db(database)[Database] in api
-    service disk1(disk)[Storage] in api
-    service disk2(disk)[Storage] in api
-    service server(server)[Server] in api
+  api_gateway --> vpc_link
+  vpc_link --> lambda_function
+  lambda_function --> dynamodb
 
-    db:L -- R:server
-    disk1:T -- B:server
-    disk2:T -- B:db
 ```
 
 
